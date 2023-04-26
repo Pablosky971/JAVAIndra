@@ -42,8 +42,8 @@ public class ProgramaJFrame {
 		JPanel panelRespuestaBotones = new JPanel();
 		JButton botonBienvenida = new JButton("Bienvenida");
 		JButton botonHabitantes = new JButton("Cantidad de habitantes");
-		JButton botonClima = new JButton("Cantidad de habitantes");
-		JButton botonActividad = new JButton("Cantidad de habitantes");
+		JButton botonClima = new JButton("Clima habitual");
+		JButton botonActividad = new JButton("Actividad económica");
 		try {
 			URL url = new URL("https://espanaviajar.com/wp-content/uploads/2021/12/UTRERA-Pueblos-mas-bonitos-de-Sevilla.jpg");
 			Image imagenUtrera = ImageIO.read(url);
