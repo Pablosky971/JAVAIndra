@@ -25,11 +25,19 @@ public class ProgramaJFrame {
 		ventana.setVisible(true);
 		String mensajeBienvenida = "¡Bienvenido a UtreInfo!";
 		JLabel etiquetaBienvenida = new JLabel(mensajeBienvenida);
+		etiquetaBienvenida.setForeground(Color.BLUE);
 		int nHabitantes = 52617;
 		String mensajeHabitantes = "Los últimos datos recogidos, apuntan " + nHabitantes + " habitantes."; 
 		JLabel etiquetaHabitantes = new JLabel(mensajeHabitantes);
-		JLabel etiquetaClima = new JLabel();
-		JLabel etiquetaActividad = new JLabel();
+		etiquetaHabitantes.setForeground(Color.BLUE);
+		String mensajeClima = "El clima de Utrera es templado y cálido.";
+		JLabel etiquetaClima = new JLabel(mensajeClima);
+		etiquetaClima.setForeground(Color.BLUE);
+		String mensajeActividad ="Utrera es eminentemente agricola. Actualmente la caracteristica"
+				+ " mas acusada de la actividad primaria en el termino de Utrera es la diversidad de cultivos,"
+				+ " predominando los cereales."; 
+		JLabel etiquetaActividad = new JLabel(mensajeActividad);
+		etiquetaActividad.setForeground(Color.BLUE);
 		JPanel panelBotones = new JPanel();
 		JPanel panelRespuestaBotones = new JPanel();
 		JButton botonBienvenida = new JButton("Bienvenida");
@@ -39,7 +47,7 @@ public class ProgramaJFrame {
 		try {
 			URL url = new URL("https://espanaviajar.com/wp-content/uploads/2021/12/UTRERA-Pueblos-mas-bonitos-de-Sevilla.jpg");
 			Image imagenUtrera = ImageIO.read(url);
-			ImageIcon iconoImagenUtrera = new ImageIcon(imagenUtrera.getScaledInstance(700, 700, java.awt.Image.SCALE_SMOOTH));
+			ImageIcon iconoImagenUtrera = new ImageIcon(imagenUtrera.getScaledInstance(500, 500, java.awt.Image.SCALE_SMOOTH));
 			etiquetaImagen.setIcon(iconoImagenUtrera);
 		
 			
@@ -58,7 +66,7 @@ public class ProgramaJFrame {
 			{
 				
 				panelRespuestaBotones.add(etiquetaBienvenida);
-				
+				panelBotones.add(etiquetaBienvenida);
 				System.out.println(mensajeBienvenida);
 				
 			
@@ -71,7 +79,7 @@ public class ProgramaJFrame {
 			public void actionPerformed(ActionEvent e)
 			{
 				panelRespuestaBotones.add(etiquetaHabitantes);
-				
+				ventana.add(panelRespuestaBotones);
 				System.out.println(mensajeHabitantes);
 				
 				
@@ -83,8 +91,10 @@ public class ProgramaJFrame {
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				
-				System.out.println("El clima de Utrera es templado y cálido."); 
+				panelRespuestaBotones.add(etiquetaClima);
+				ventana.add(panelRespuestaBotones);
+				System.out.println(mensajeClima);
+				 
 				
 
 			}
@@ -94,10 +104,10 @@ public class ProgramaJFrame {
 		{
 			public void actionPerformed(ActionEvent e)
 			{
+				panelRespuestaBotones.add(etiquetaActividad);
+				ventana.add(panelRespuestaBotones);
+				System.out.println(mensajeActividad);
 				
-				System.out.println("Utrera es eminentemente agricola. Actualmente la caracteristica"
-						+ " mas acusada de la actividad primaria en el termino de Utrera es la diversidad de cultivos,"
-						+ " predominando los cereales."); 
 				
 			}
 		});
@@ -107,7 +117,7 @@ public class ProgramaJFrame {
 		panelBotones.add(botonActividad);
 	
 		ventana.add(panelBotones);
-		ventana.add(panelRespuestaBotones);
+		
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
