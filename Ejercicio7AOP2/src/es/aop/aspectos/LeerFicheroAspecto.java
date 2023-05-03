@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class LeerFicheroAspecto {
 
-	@Before("execution(public Set<String> leerFichero())")
+	@Before("execution(public void leerFichero())")
 	public void avisoLeerFichero() {
 		System.out.println("Comienza el proceso de lectura de fichero...");
 	}
 
-	@After("execution (public Set<String> leerFichero())")
+	@After("execution(public void leerFichero())")
 	public void muestraLineasFichero() {
 		System.out.println("Ya hemos finalizado el proceso de lectura del fichero.");
 	}

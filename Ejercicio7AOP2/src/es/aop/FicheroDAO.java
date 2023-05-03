@@ -11,28 +11,33 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FicheroDAO {
-	public Set<String> leerFichero() {
+	public void leerFichero() {
 		try
 		
 		{
 			Set<String> lineas = new HashSet<>();
-			String ruta = "C:\\Users\\pcallep\\Desktop\\GT3_JAVA\\Ejercicio7AOP2\\";
 			String nombreArchivo = "FICHERO_AOP.txt";
-			String rutaNombreArchivo = ruta + nombreArchivo;
+			String rutaNombreArchivo =  nombreArchivo;
 			File documento = new File(rutaNombreArchivo);
 			BufferedReader lector = new BufferedReader(new FileReader(documento));
 			String caracteres = "";
 			while((caracteres = lector.readLine()) != null)
 			{
-				System.out.println(caracteres);
+		
 				lineas.add(caracteres);
+				
+			
+		}
+			int i = 1;
+			for(String linea : lineas) {
+				System.out.println("Línea " + i + ": " + linea+"\n"); 
+				i++;
 			}
-			return lineas;
 		}
 		catch (IOException e)
 		{
 			e.printStackTrace();
-			return null;
+			
 		}
 		
 	}
