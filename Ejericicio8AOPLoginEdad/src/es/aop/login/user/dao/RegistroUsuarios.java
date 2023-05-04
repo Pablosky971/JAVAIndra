@@ -35,12 +35,15 @@ public class RegistroUsuarios {
 			int mes = Integer.parseInt(fechaNacimientoParticionada[1]);
 			int dia = Integer.parseInt(fechaNacimientoParticionada[2]);	
 			
-			Usuario usuario = registro.registroDeUsuario(nombre, apellido, LocalDate.of(anio, mes, dia), nombreUsuario, email);
-			usuarios.add(usuario);
+			
+			usuarios.add(registro.registroDeUsuario(nombre, apellido, LocalDate.of(anio, mes, dia), nombreUsuario, email));
 		}
 		scanner.close();
-		System.out.println("Usuarios: " + usuarios.get(0));
+		for(Usuario usuario : usuarios) {
+			System.out.println("Usuario " + usuario.getNombreUsuario() + ": " + usuario.toString());
+		}
 		context.close();
+		
 		
 		
 	}
