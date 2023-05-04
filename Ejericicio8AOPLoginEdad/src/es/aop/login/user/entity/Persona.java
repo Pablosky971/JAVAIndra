@@ -21,7 +21,7 @@ public class Persona implements IPersona {
 	@Override
 	public Integer edad() {
 		
-		return Period.between(LocalDate.now(), fechaNacimiento).getYears();
+		return Period.between(fechaNacimiento,LocalDate.now()).getYears();
 	}
 	
 	
