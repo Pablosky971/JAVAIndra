@@ -14,14 +14,15 @@ import org.springframework.stereotype.Component;
 public class InfoRegistro {
 	
 	@Around("execution(public * es.aop.login.user.Registro.registroDeUsuario(..))")
-	public void infoLogin(JoinPoint joinPoint) {
+	public Object infoLogin(ProceedingJoinPoint joinPoint) throws Throwable {
 		long startTime = System.currentTimeMillis();
+		Object user = joinPoint.proceed();
 		long endTime = System.currentTimeMillis();
 		System.out.println("Tiempo de ejecución de la funcion: " + (endTime - startTime));
 		System.out.println("Ejecutando metodo: " + joinPoint.getSignature().getName());
 		String username = System.getProperty("user.name");
 	    System.out.println("El usuario que esta ejecutando el programa es: "+ username);
-	    
+	    return user;
 	}
 	
 	@After("execution(public * es.aop.login.user.Registro.registroDeUsuario(..))")

@@ -1,10 +1,7 @@
 package es.aop.login.user;
 
 import java.time.LocalDate;
-import java.util.Scanner;
-
 import org.springframework.stereotype.Component;
-
 import es.aop.login.user.entity.Usuario;
 
 @Component
