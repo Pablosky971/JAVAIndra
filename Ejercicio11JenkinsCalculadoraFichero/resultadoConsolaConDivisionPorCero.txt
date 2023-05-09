@@ -1,0 +1,78 @@
+Lanzada por el usuario Pablosky
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins  in C:\ProgramData\Jenkins\.jenkins\workspace\Ejercicio11CalculadoraFichero
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Suma)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La suma 20 y 0 es 20
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Resta)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La resta 20 y 0 es 20
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Producto)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+El producto de 20 y 0 es 0
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Division)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+No se puede dividir entre cero
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (EscribeFicheroInfoCalculadora)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] writeFile
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (LecturaFichero)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] readFile
+[Pipeline] echo
+Los resultados de las operaciones con los números 20 y 0 son:
+Suma: 20
+Resta: 20
+Producto: 0
+División: No se puede dividir entre cero
+
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
