@@ -1,0 +1,53 @@
+Lanzada por el usuario Pablosky
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins  in C:\ProgramData\Jenkins\.jenkins\workspace\Ejercicio10JenkinsCalculadora
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Suma)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La suma 20 y 0 es 20
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Resta)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La resta 20 y 0 es 20
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Producto)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+El producto de 20 y 0 es 0
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Division)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+No se puede dividir entre cero
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

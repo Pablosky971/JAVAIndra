@@ -1,0 +1,58 @@
+pipeline
+{
+    agent any
+    
+    environment{
+        def numero1=20
+        def numero2=10
+    }
+    stages {
+    stage("Suma") {
+        steps {
+            script {
+                resultadoSuma=numero1.toInteger()+numero2.toInteger()
+                println "La suma ${numero1} y ${numero2} es ${resultadoSuma}"
+            }
+            
+        }
+    }
+    
+    stage("Resta") {
+        steps {
+            script {
+                resultadoResta=numero1.toInteger()-numero2.toInteger()
+                println "La resta ${numero1} y ${numero2} es ${resultadoResta}"
+            }
+            
+        }
+    }
+    
+    stage("Producto") {
+        steps {
+            script {
+                resultadoProducto=numero1.toInteger()*numero2.toInteger()
+                println "El producto de ${numero1} y ${numero2} es ${resultadoProducto}"
+            }
+            
+        }
+    }
+    
+    stage("Division") {
+        steps {
+            script {
+                if(numero2.toInteger()==0) {
+                    println "No se puede dividir entre cero"
+                } else {
+                    resultadoDivision=numero1.toInteger()/numero2.toInteger()
+                    println "La división de ${numero1} y ${numero2} es ${resultadoDivision}"
+                }
+                
+            }
+            
+        }
+    }
+    }
+    
+    
+    
+}
