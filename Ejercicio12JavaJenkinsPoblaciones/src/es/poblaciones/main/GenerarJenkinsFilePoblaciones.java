@@ -39,7 +39,7 @@ public class GenerarJenkinsFilePoblaciones {
 					String stageCiudad =  "stage(\""+ ciudad.getNombreCiudad()+ "\") {\n" +
 	                        "            steps {\n" +
 	                        "                script {\n" +
-	                        "                    println \"La ciudad " + ciudad.getNombreCiudad() + ", tiene una población final de: "  + ciudad.poblacionTotal() + " habitantes." + "\"\n" +
+	                        "                    println \"La ciudad " + ciudad.getNombreCiudad() + ", tiene una poblacion final de: "  + ciudad.poblacionTotal() + " habitantes." + "\"\n" +
 	                        "                }\n" +
 	                        "            }\n" +
 	                        "        }\n";
