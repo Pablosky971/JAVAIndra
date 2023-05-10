@@ -1,0 +1,78 @@
+Lanzada por el usuario Pablosky
+Obtained Ejercicio12JavaJenkinsPoblaciones/Jenkinsfile from git https://github.com/Pablosky971/JAVAIndra
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins  in C:\ProgramData\Jenkins\.jenkins\workspace\Ejercicio12JenkinsFicheroPoblaciones
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential 81d70000-3615-4acb-b8ca-538b9e760206
+ > C:\Program Files\Git\bin\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\Ejercicio12JenkinsFicheroPoblaciones\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/Pablosky971/JAVAIndra # timeout=10
+Fetching upstream changes from https://github.com/Pablosky971/JAVAIndra
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > git --version # 'git version 2.40.0.windows.1'
+using GIT_SSH to set credentials 
+Verifying host key using known hosts file
+You're using 'Known hosts file' strategy to verify ssh host keys, but your known_hosts file does not exist, please go to 'Manage Jenkins' -> 'Configure Global Security' -> 'Git Host Key Verification Configuration' and configure host key verification.
+ > C:\Program Files\Git\bin\git.exe fetch --tags --force --progress -- https://github.com/Pablosky971/JAVAIndra +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 43cad583ded282a35e1669c5bdddfce874c96914 (refs/remotes/origin/main)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 43cad583ded282a35e1669c5bdddfce874c96914 # timeout=10
+Commit message: "Nueva correción del ejercicio 12: supresión de la tilde en la palabra población"
+ > C:\Program Files\Git\bin\git.exe rev-list --no-walk 7a82e7bf0ae0d2662caf8ab17b1edbb4919081e3 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Barcelona)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La ciudad Barcelona, tiene una poblacion final de: 80000 habitantes.
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Madrid)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La ciudad Madrid, tiene una poblacion final de: 800000 habitantes.
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Malaga)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La ciudad Malaga, tiene una poblacion final de: 40000 habitantes.
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Sevilla)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+La ciudad Sevilla, tiene una poblacion final de: 64000 habitantes.
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
