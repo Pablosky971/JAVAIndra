@@ -11,36 +11,8 @@ import es.poblaciones.model.Ciudad;
 public class GenerarJenkinsFilePoblaciones {
 
 	public static void main(String[] args) {
-		List<Ciudad> ciudades = generarCiudades();
+		escribirFicheroFileJenkins();
 		
-		try (
-				PrintWriter writer = new PrintWriter(new FileWriter("Jenkinsfile")))
-			{
-			String inicioContenidoJenkinsFile = 
-					"pipeline {\n" +
-	                        "    agent any\n" +
-	                        "    stages {\n";
-	                       
-				writer.write(inicioContenidoJenkinsFile);
-				for(Ciudad ciudad : ciudades) {
-					String stageCiudad =  "stage("+ ciudad.getNombreCiudad()+ ") {\n" +
-	                        "            steps {\n" +
-	                        "                script {\n" +
-	                        "                    println \"La ciudad ${" + ciudad.getNombreCiudad() + "}, tiene una población final de: "  + ciudad.poblacionTotal() +"\n" +
-	                        "                }\n" +
-	                        "            }\n" +
-	                        "        }\n";
-					writer.write(stageCiudad);
-					
-				}
-			} 
-			
-			catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-	
 
 	}
 	
@@ -52,5 +24,40 @@ public class GenerarJenkinsFilePoblaciones {
 		ciudades.add(new Ciudad("Sevilla", 80000));
 		return ciudades;
 		}
+	public static void escribirFicheroFileJenkins() {
+		List<Ciudad> ciudades = generarCiudades();
+		try (
+				PrintWriter writer = new PrintWriter(new FileWriter("Jenkinsfile")))
+			{
+			String inicioContenidoJenkinsFile = 
+					"pipeline {\n" +
+	                        "    agent any\n" +
+	                        "    stages {\n";
+	                       
+				writer.write(inicioContenidoJenkinsFile);
+				for(Ciudad ciudad : ciudades) {
+					String stageCiudad =  "stage(\""+ ciudad.getNombreCiudad()+ "\") {\n" +
+	                        "            steps {\n" +
+	                        "                script {\n" +
+	                        "                    println \"La ciudad ${" + ciudad.getNombreCiudad() + "}, tiene una población final de: "  + ciudad.poblacionTotal() + " habitantes." + "\"\n" +
+	                        "                }\n" +
+	                        "            }\n" +
+	                        "        }\n";
+					writer.write(stageCiudad);
+					
+				}
+				String finContenidoJenkinsFile = 
+						"        }\n" +
+						"        }\n";
+				writer.write(finContenidoJenkinsFile);
+			} 
+			
+			catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+
+		
+	}
 
 }

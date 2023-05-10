@@ -17,7 +17,8 @@ public class Ciudad implements ICiudad {
 	
 	@Override
 	public Integer poblacionTotal() {
-		// Como la poblacion ha de ser un número entero, redondeamos.
+		/* Como la poblacion ha de ser un número entero,
+		 en caso de decimales, redondeamos*/
 		return (int) Math.round(poblacionParcial * 0.80);
 		
 		 

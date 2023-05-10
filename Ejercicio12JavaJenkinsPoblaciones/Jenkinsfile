@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    stages {
+stage("Barcelona") {
+            steps {
+                script {
+                    println "La ciudad ${Barcelona}, tiene una población final de: 80000 habitantes."
+                }
+            }
+        }
+stage("Madrid") {
+            steps {
+                script {
+                    println "La ciudad ${Madrid}, tiene una población final de: 800000 habitantes."
+                }
+            }
+        }
+stage("Málaga") {
+            steps {
+                script {
+                    println "La ciudad ${Málaga}, tiene una población final de: 40000 habitantes."
+                }
+            }
+        }
+stage("Sevilla") {
+            steps {
+                script {
+                    println "La ciudad ${Sevilla}, tiene una población final de: 64000 habitantes."
+                }
+            }
+        }
+        }
+        }
