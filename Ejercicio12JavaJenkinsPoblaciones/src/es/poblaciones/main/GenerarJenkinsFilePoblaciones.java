@@ -20,7 +20,7 @@ public class GenerarJenkinsFilePoblaciones {
 		List<Ciudad> ciudades = new ArrayList<>();
 		ciudades.add(new Ciudad("Barcelona", 100000));
 		ciudades.add(new Ciudad("Madrid", 1000000));
-		ciudades.add(new Ciudad("Málaga", 50000));
+		ciudades.add(new Ciudad("Malaga", 50000));
 		ciudades.add(new Ciudad("Sevilla", 80000));
 		return ciudades;
 		}
@@ -39,7 +39,7 @@ public class GenerarJenkinsFilePoblaciones {
 					String stageCiudad =  "stage(\""+ ciudad.getNombreCiudad()+ "\") {\n" +
 	                        "            steps {\n" +
 	                        "                script {\n" +
-	                        "                    println \"La ciudad ${" + ciudad.getNombreCiudad() + "}, tiene una población final de: "  + ciudad.poblacionTotal() + " habitantes." + "\"\n" +
+	                        "                    println \"La ciudad " + ciudad.getNombreCiudad() + ", tiene una población final de: "  + ciudad.poblacionTotal() + " habitantes." + "\"\n" +
 	                        "                }\n" +
 	                        "            }\n" +
 	                        "        }\n";
