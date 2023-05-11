@@ -49,9 +49,7 @@ public class PokemonAPI {
 
 				JSONObject jsonPokemon = new JSONObject(infoPokemon.toString());
 				name = jsonPokemon.getJSONObject("species").getString("name");
-				System.out.println(jsonPokemon.getJSONArray("types").getJSONObject(0).getJSONObject("type").get("name"));
 				type = jsonPokemon.getJSONArray("types").getJSONObject(0).getJSONObject("type").get("name").toString();
-				System.out.println(jsonPokemon.getInt("weight"));
 				weight = jsonPokemon.getInt("weight");
 
 			}
