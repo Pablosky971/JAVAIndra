@@ -1,0 +1,18 @@
+==========================================
+Artista 1: Nach
+==========================================
+Nombre del artista: Nach
+Género musical: Rap
+Cantidad de reproducciones: 320000
+País donde más se escucha: Colombia
+Recaudación monetaria: 6400.0
+Proyección anual: 76800.0
+==========================================
+Artista 2: Canserbero
+==========================================
+Nombre del artista: Canserbero
+Género musical: Rap
+Cantidad de reproducciones: 500000
+País donde más se escucha: Venezuela
+Recaudación monetaria: 10000.0
+Proyección anual: 120000.0
