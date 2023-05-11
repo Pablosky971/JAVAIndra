@@ -1,0 +1,4 @@
+Pokemon: 
+Nombre: snorlax
+Tipo: normal
+Peso: 4600
