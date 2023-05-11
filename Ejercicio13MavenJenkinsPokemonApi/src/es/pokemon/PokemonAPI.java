@@ -93,6 +93,7 @@ public class PokemonAPI {
 			bufferedWriter.write("Tipo: " + type + "\n");
 			bufferedWriter.write("Peso: " + weight + "\n");
 			bufferedWriter.close();
+			System.out.println("¡El fichero con la información del pokemon se ha creado con éxito!");
 			}
 			}
 			catch(IOException e) {
