@@ -15,7 +15,7 @@
 	<name>Ejercicio18SpringCiudad</name>
 	<description>Ejercicio18</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
