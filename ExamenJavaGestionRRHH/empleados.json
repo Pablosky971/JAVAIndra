@@ -1,0 +1,38 @@
+[
+{
+"nombre": "Pablo",
+"apellido": "Calle",
+"fechaIngreso": "2021-04-12",
+"fechaSalida": "2045-04-12",
+"sexo": "MASCULINO",
+"posicion": "INGENIERO",
+"salarioBase": "1500.0",
+"salarioFinal": "1245.0",
+"antiguedadLaboral": "24",
+"rotacionRecomendada": "ROTACION_HABILITADA"
+},
+{
+"nombre": "Marco",
+"apellido": "Fernández",
+"fechaIngreso": "2022-04-06",
+"fechaSalida": "2023-04-06",
+"sexo": "MASCULINO",
+"posicion": "INGENIERO",
+"salarioBase": "1700.0",
+"salarioFinal": "1411.0",
+"antiguedadLaboral": "1",
+"rotacionRecomendada": "ROTACION_NO_HABILITADA"
+},
+{
+"nombre": "Miguel",
+"apellido": "Reyes",
+"fechaIngreso": "2021-04-11",
+"fechaSalida": "2023-04-11",
+"sexo": "MASCULINO",
+"posicion": "INGENIERO",
+"salarioBase": "1500.0",
+"salarioFinal": "1245.0",
+"antiguedadLaboral": "2",
+"rotacionRecomendada": "A_DEFINIR"
+}
+]

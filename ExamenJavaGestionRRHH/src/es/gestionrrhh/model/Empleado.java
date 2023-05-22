@@ -15,7 +15,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Empleado implements IEmpleado {
-	
+
 	private String nombre;
 	private String apellido;
 	private LocalDate fechaIngreso;
@@ -27,25 +27,25 @@ public class Empleado implements IEmpleado {
 
 	@Override
 	public double calcularSalario() {
-		
+
 		return salarioBase * 0.83;
 	}
 
 	@Override
 	public int antiguedadLaboral() {
-		
+
 		return Period.between(fechaIngreso, fechaSalida).getYears();
 	}
 
 	@Override
 	public Rotacion rotacionRecomendada() {
 		Rotacion rotacionEmpleado;
-		if(posicion==Puesto.INGENIERO && antiguedadLaboral() > 2) {
-			rotacionEmpleado=Rotacion.ROTACION_HABILITADA;
-		} else if(posicion==Puesto.INGENIERO && antiguedadLaboral() < 2) {
-			rotacionEmpleado=Rotacion.ROTACION_NO_HABILITADA;
+		if (posicion == Puesto.INGENIERO && antiguedadLaboral() > 2) {
+			rotacionEmpleado = Rotacion.ROTACION_HABILITADA;
+		} else if (posicion == Puesto.INGENIERO && antiguedadLaboral() < 2) {
+			rotacionEmpleado = Rotacion.ROTACION_NO_HABILITADA;
 		} else {
-			rotacionEmpleado=Rotacion.A_DEFINIR;		
+			rotacionEmpleado = Rotacion.A_DEFINIR;
 		}
 		return rotacionEmpleado;
 	}
