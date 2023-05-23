@@ -191,7 +191,7 @@ public class ConsultarTiempoApp {
 			case ABRIGAR:
 				System.out.println("Recomendación: Abrigarse.\n");
 				break;
-			case A_DEFINIR:
+			case A_DEFINIR: 
 				System.out.println("Recomendación: Use la ropa que prefiera.\n");
 			}
 				
